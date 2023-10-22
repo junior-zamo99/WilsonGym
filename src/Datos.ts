@@ -11,7 +11,7 @@ export const menu=[
             },
             {   id:2,
                 titulo:"Perfil",
-                URL:"/usuario/1",
+                URL:"/home/rol",
                 icono:"user.svg",
             },
         ],
@@ -29,7 +29,7 @@ export const menu=[
           {
             id: 2,
             titulo: "Producto",
-            URL: "/home/producto",
+            URL: "/home/rol",
             icono: "product.svg",
           },
           {
@@ -101,3 +101,15 @@ export const topDealUsers = [
     amount: "1.560",
   },
 ];
+
+export const roles=[
+  {
+    id:1,
+    nombre:"Administrador"
+  },
+  {
+    id:1,
+    nombre:"Entrenador"
+  },
+
+]

@@ -14,6 +14,9 @@ import Menu from "./components/Menu/Menu";
 //import PiePagina from "./components/PiePagina/PiePagina";
 import Login from "./pages/login/Login";
 import './styles/global.scss'
+import Rol from "./pages/Rol/Rol";
+import CrearRol from "./pages/Rol/crearRol/CrearRol";
+
 
 function App() {
   
@@ -46,6 +49,14 @@ function App() {
             path:"/home",
             element:<Home/>
           },
+          {
+              path:"/home/rol",
+              element:<Rol/>
+          },
+          {
+            path:"/home/crearRol",
+            element:<CrearRol/>
+        },
           {
             path:"/home/usuario",
             element:<Usuario/>,
