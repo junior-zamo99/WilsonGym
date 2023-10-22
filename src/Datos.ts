@@ -6,7 +6,7 @@ export const menu=[
         lista:[
             {   id:1,
                 titulo:"Pagina de Inicio",
-                URL:"/",
+                URL:"/home",
                 icono:"home.svg",
             },
             {   id:2,
@@ -23,13 +23,13 @@ export const menu=[
           {
             id: 1,
             titulo: "Usuario",
-            URL: "/usuario",
+            URL: "/home/usuario",
             icono: "user.svg",
           },
           {
             id: 2,
             titulo: "Producto",
-            URL: "/login",
+            URL: "/home/producto",
             icono: "product.svg",
           },
           {

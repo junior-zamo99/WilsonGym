@@ -8,6 +8,7 @@ import {
 import Usuario from "./pages/usuario/Usuario";
 import Producto from "./pages/producto/Producto";
 import Crear from "./pages/usuario/Crear/Crear";
+import Editar from "./pages/usuario/editar/Editar";
 import BarraNav from "./components/BarraNav/BarraNav";
 import Menu from "./components/Menu/Menu";
 //import PiePagina from "./components/PiePagina/PiePagina";
@@ -33,35 +34,40 @@ function App() {
     )
   }
 
+
+
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/home",
       element:<Layout/>,
       children:[
         
           {
-            path:"/",
+            path:"/home",
             element:<Home/>
           },
           {
-            path:"/usuario",
+            path:"/home/usuario",
             element:<Usuario/>,
           },
           {
-            path:"/crear",
+            path:"/home/crear",
             element:<Crear/>
           },
           {
-            path:"/producto",
+             path:"/home/editar",
+             element:<Editar/>
+          },
+          {
+            path:"/home/producto",
             element:<Producto/>
           },
           
-        
       ]
     },
 
           {
-            path:"/login",
+            path:"/",
             element: <Login/>
           }
     ]);

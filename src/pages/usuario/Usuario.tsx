@@ -1,16 +1,20 @@
-import Crear from "./Crear/Crear"
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import{user} from "../../usuario"
-
+import Example from "./eliminar/Eliminar"
 import { Link } from 'react-router-dom';
 import "./usuario.scss"
+
 const Usuario = () => {
 
-    
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
+    <>
     <div className="usuario">
       <div>
-         <Link to="/crear">
+         <Link to="/home/crear">
       <button className="boton">Crear Usuario</button>
         </Link>  
        </div>
@@ -42,9 +46,11 @@ const Usuario = () => {
               <td>{usuario.usuario}</td>
               
                 <div className="botones">
-                 
+              <Link to="/a/editar">
                 <button className="editar">Editar</button>
-                <button className="eliminar">Eliminar</button>
+              </Link>
+              
+                <button className="eliminar" onClick={handleShow}>Eliminar</button>
                 </div>
                 
             </tr>
@@ -53,7 +59,8 @@ const Usuario = () => {
       </table>
     </div>
     </div>
-
+    <Example show={show} handleClose={handleClose}/>
+    </>
     
   )
 }
